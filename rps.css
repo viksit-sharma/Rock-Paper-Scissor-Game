@@ -1,0 +1,115 @@
+  
+@import url('https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap');
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Trade Winds';
+    background-color: #2e2e2e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ff0000;
+    text-align: center;
+  }
+
+  p {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #ff0000;
+    text-shadow: 1px 1px 2px #000;
+  }
+  p {
+    text-shadow: 0px 0 10px rgb(0, 0, 0);
+    transform: scale(1.05);
+  }
+
+  button {
+    background-color: #4a4a4a;
+    color: #f5f5f5;
+    font-size: 5rem;
+    padding: 12px 28px;
+    margin: 12px;
+    border: 2px solid #b0b0b0;     border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  button:hover {
+    box-shadow: 0px 0 20px rgba(255, 0, 0, 0.571);
+    transform: scale(1.05);
+  }
+  
+
+  @media (max-width: 567px) {
+    body {
+      padding: 20px;
+    }
+
+    p {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      font-size: 1rem;
+      margin: 10px 0;
+    }
+  }
+  #rock,
+#paper,
+#scissors {
+  font-family: 'Trade Winds', cursive;
+  font-size: 3rem;
+  color: transparent;
+  position: relative;
+  width: 9rem;
+  height: 9rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #aaa;
+  border-radius: 12px;
+  background-color: #444;
+  transition: 0.3s ease;
+  text-align: center;
+  padding: 0;
+}
+
+#rock::before,
+#paper::before,
+#scissors::before {
+  position: absolute;
+  color: #f50000;
+  transition: 0.3s ease;
+  text-align: center;
+}
+
+#rock::before {
+  content: "🪨";
+}
+#paper::before {
+  content: "📄";
+}
+#scissors::before {
+  content: "✂️";
+}
+
+#rock:hover::before {
+  content: "Rock";
+  font-size: 2rem;
+}
+#paper:hover::before {
+  content: "Paper";
+  font-size: 2rem;
+}
+#scissors:hover::before {
+  content: "Scissors";
+  font-size: 2rem;
+}
