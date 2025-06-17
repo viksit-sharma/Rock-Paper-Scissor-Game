@@ -8,7 +8,7 @@ function playGame(playerMove) {
           } else if (computerMove === "Paper") {
             result = "You win";
           } else if (computerMove === "Scissors") {
-            result = "Tie";
+            result = "It's a tie";
           }
           alert(
             `You picked ${playerMove}. Computer picked ${computerMove}. ${result}`
@@ -18,11 +18,11 @@ function playGame(playerMove) {
 
         let result;
         if (computerMove === "Rock") {
-            result = "You win";
+            result = "It's a tie";
         } else if (computerMove === "Paper") {
-            result = "Tie";
-        } else if (computerMove === "Scissors") {
             result = "You lose";
+        } else if (computerMove === "Scissors") {
+            result = "You win";
         }
         alert(
             `You picked ${playerMove}. Computer picked ${computerMove}. ${result}`
@@ -32,11 +32,11 @@ function playGame(playerMove) {
 
         let result;
         if (computerMove === "Rock") {
-            result = "Tie";
-        } else if (computerMove === "Paper") {
-            result = "You lose";
-        } else if (computerMove === "Scissors") {
             result = "You win";
+        } else if (computerMove === "Paper") {
+            result = "It's a tie";
+        } else if (computerMove === "Scissors") {
+            result = "You lose";
         }
         alert(
           `You picked ${playerMove}. Computer picked ${computerMove}. ${result}`
