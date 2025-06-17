@@ -2,15 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="\rps.css">
+    <link rel="stylesheet" href="\rps.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissors Game</title>
   </head>
   <body>
-    
     <p>Rock Papers Scissors</p>
     <button
-    id="rock"
+      id="rock"
       onclick="
     playGame('Rock');
     "
@@ -19,7 +18,7 @@
     </button>
 
     <button
-    id="paper"
+      id="paper"
       onclick="
     playGame('Paper');
     "
@@ -28,74 +27,13 @@
     </button>
 
     <button
-    id="scissors"
+      id="scissors"
       onclick="
     playGame('Scissors'); 
     "
     >
       ✂️
     </button>
-
-    <script>
-      function playGame(playerMove) {
-        const computerMove = pickComputerMove();
-
-        let result;
-        if (playerMove === "Scissors") {
-          if (computerMove === "Rock") {
-            result = "You lose";
-          } else if (computerMove === "Paper") {
-            result = "You win";
-          } else if (computerMove === "Scissors") {
-            result = "Tie";
-          }
-          alert(
-            `You picked ${playerMove}. Computer picked ${computerMove}. ${result}`
-          );
-        } else if (playerMove === "Rock") {
-          const computerMove = pickComputerMove();
-
-        let result;
-        if (computerMove === "Rock") {
-            result = "You win";
-        } else if (computerMove === "Paper") {
-            result = "Tie";
-        } else if (computerMove === "Scissors") {
-            result = "You lose";
-        }
-        alert(
-            `You picked ${playerMove}. Computer picked ${computerMove}. ${result}`
-        );
-        } else if (playerMove === "Paper") {
-        const computerMove = pickComputerMove();
-
-        let result;
-        if (computerMove === "Rock") {
-            result = "Tie";
-        } else if (computerMove === "Paper") {
-            result = "You lose";
-        } else if (computerMove === "Scissors") {
-            result = "You win";
-        }
-        alert(
-          `You picked ${playerMove}. Computer picked ${computerMove}. ${result}`
-        );
-        }
-      }
-      function pickComputerMove() {
-        let computerMove = "";
-
-        const randomNumber = Math.random();
-
-        if (randomNumber >= 0 && randomNumber < 1 / 3) {
-          computerMove = "Rock";
-        } else if (randomNumber > 1 / 3 && randomNumber < 2 / 3) {
-          computerMove = "Paper";
-        } else if (randomNumber > 2 / 3 && randomNumber < 1) {
-          computerMove = "Scissors";
-        }
-        return computerMove;
-      }
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>
