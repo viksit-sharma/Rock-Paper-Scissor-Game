@@ -14,7 +14,6 @@
     playGame('Rock');
     "
     >
-      🪨
     </button>
 
     <button
@@ -23,7 +22,6 @@
     playGame('Paper');
     "
     >
-      📄
     </button>
 
     <button
@@ -31,9 +29,12 @@
       onclick="
     playGame('Scissors'); 
     "
-    >
-      ✂️
-    </button>
+    ></button>
+    <button id="reset" onclick="
+    score.wins=0;
+    score.loses=0;
+    score.ties=0;
+    "></button>
     <script src="index.js"></script>
   </body>
 </html>

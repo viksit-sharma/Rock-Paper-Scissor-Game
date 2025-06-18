@@ -13,7 +13,30 @@
     color: #ff0000;
     text-align: center;
   }
-
+#reset{
+  width:12vh;
+  font-size: 2.5rem;
+  background-color: rgba(0, 0, 0, 0.192);
+  font-family: 'Trade Winds';
+  color: rgb(97, 163, 255);
+  position: relative;
+  overflow: hidden;
+  border-radius: 25%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+#reset::before {
+  content: "🔄";
+  transition: 0.35s ease;
+}
+#reset:hover::before {
+  content: "Reset";
+  font-size: 1.4rem;
+}
+#reset:hover{
+  box-shadow: 0 0 15px rgba(97, 163, 255, 0.8);
+}
   p {
     font-size: 3rem;
     font-weight: bold;
@@ -32,7 +55,8 @@
     font-size: 5rem;
     padding: 12px 28px;
     margin: 12px;
-    border: 2px solid #b0b0b0;     border-radius: 50px;
+    border: 2px solid #b0b0b0;     
+    border-radius: 50px;
     cursor: pointer;
     font-weight: bold;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
@@ -75,7 +99,7 @@
   align-items: center;
   justify-content: center;
   border: 2px solid #aaa;
-  border-radius: 12px;
+  border-radius: 15%;
   background-color: #444;
   transition: 0.3s ease;
   text-align: center;
@@ -87,18 +111,19 @@
 #scissors::before {
   position: absolute;
   color: #f50000;
+  stroke-width: 2px;
   transition: 0.3s ease;
   text-align: center;
 }
 
 #rock::before {
-  content: "🪨";
+  content: "✊🏼";
 }
 #paper::before {
-  content: "📄";
+  content: "✋🏼";
 }
 #scissors::before {
-  content: "✂️";
+  content: "✌🏼";
 }
 
 #rock:hover::before {
